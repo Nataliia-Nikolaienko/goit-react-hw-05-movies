@@ -1,0 +1,14 @@
+.trendingMovieContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movieList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.movieItem {
+  border: 1px solid black;
+}

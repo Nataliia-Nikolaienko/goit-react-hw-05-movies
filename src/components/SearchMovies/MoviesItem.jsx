@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 import css from './SearchMovies.module.css';
 
 const MoviesItem = ({ movies }) => {
-  return movies.map(({ id, name, title }) => {
+  return movies.map(({ id, title, poster_path }) => {
     return (
-      <Link to={`/movies/${id}`} key={id}>
-        <li className={css.movieItem}>
-          <h2>{name || title}</h2>
-        </li>
-      </Link>
+      <li className={css.movieItem} key={id}>
+        <img
+          src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+          alt={title}
+          height="350"
+        />
+        <Link to={`/movies/${id}`}>{title}</Link>
+      </li>
     );
   });
 };

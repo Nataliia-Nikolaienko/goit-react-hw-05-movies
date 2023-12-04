@@ -3,7 +3,7 @@ import axios from 'axios';
 const instance = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
   params: {
-    api_key: '745d3059607430576655f23c9bd455f7',
+    api_key: '8aba4e3419a44727b7eb66f35fce4fa2',
   },
 });
 
@@ -24,7 +24,7 @@ export const movieDetails = async id => {
   return data;
 };
 
-export const movieCredits = async id => {
+export const movieCast = async id => {
   const { data } = await instance.get(`/movie/${id}/credits`);
   return data;
 };

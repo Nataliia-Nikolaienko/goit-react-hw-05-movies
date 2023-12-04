@@ -5,9 +5,11 @@ import MoviesItem from './MoviesItem';
 
 const MovieList = ({ movies }) => {
   return (
-    <ul className={css.movieList}>
-      <MoviesItem movies={movies} />
-    </ul>
+    <div className={css.trendingMovieContainer}>
+      <ul className={css.movieList}>
+        <MoviesItem movies={movies} />
+      </ul>
+    </div>
   );
 };
 

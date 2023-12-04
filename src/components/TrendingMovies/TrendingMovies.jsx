@@ -13,8 +13,8 @@ const TrendingMovies = () => {
       try {
         const data = await trendingFilms();
         setMovies(data.results);
-      } catch (error) {
-        setError(error.message);
+      } catch ({ response }) {
+        setError(response.data.message);
       }
     };
 

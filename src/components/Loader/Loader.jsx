@@ -7,7 +7,7 @@ const Loader = () => {
     <div className={css.loader}>
       <ProgressBar
         height="180"
-        width="800"
+        width="1000"
         ariaLabel="progress-bar-loading"
         wrapperStyle={{}}
         wrapperClass="progress-bar-wrapper"

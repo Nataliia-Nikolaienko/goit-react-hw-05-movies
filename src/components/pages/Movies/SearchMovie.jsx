@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { searchMovies } from 'api/moviesApi';
-import css from './SearchMovie.module.css';
+import css from './SearchBar.module.css';
 
 import SearchBar from './SearchBar';
 import MovieList from 'components/SearchMovies/MoviesList';
@@ -43,10 +43,10 @@ const SearchMovie = () => {
   }, [search]);
 
   return (
-    <div className={css.SearchBarContainer}>
-      {error && <h1>{error}</h1>}
+    <div className={css.SearchMovieContainer}>
       <SearchBar onSubmit={searchInput} />
       {isLoading && <Loader />}
+      {error && <h1>{error}</h1>}
       {<MovieList movies={movies} />}
     </div>
   );

@@ -1,10 +1,16 @@
 .reviewsContainer {
   padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  text-align: center;
+  margin-right: auto;
+  border-top: 1px solid black;
 }
 
 .reviewsListItem {
   border-bottom: 1px solid black;
   padding: 10px;
+  box-shadow: 0px 3.26027px 41.726px #363450;
 }
 
 .reviewsListItem:not(:last-child) {

@@ -1,3 +1,7 @@
+.container {
+  padding: 20px;
+}
+
 .detailsWrapper {
   border-bottom: 1px solid black;
   display: flex;
@@ -12,14 +16,39 @@
   padding: 20px;
 }
 
+.BackBtn {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  background-color: whitesmoke;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.BackBtn:hover,
+.BackBtn:focus {
+  color: white;
+  background-color: rgb(155, 127, 180);
+}
+
 .movieTitle {
   font-size: 28px;
   margin-bottom: 10px;
 }
 
+.movieImg {
+  box-shadow: 0px 3.26027px 41.726px #363450;
+  border-radius: 10px;
+}
+
 .movieDetailsTitle {
   font-size: 22px;
   margin-bottom: 10px;
+}
+
+.movieAdditionalTitle {
+  text-align: center;
 }
 
 .description {
@@ -32,6 +61,12 @@
 
 .additionalInfoContainer {
   padding: 20px;
+}
+
+.additionalList {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 
 .additionalInfoItem {

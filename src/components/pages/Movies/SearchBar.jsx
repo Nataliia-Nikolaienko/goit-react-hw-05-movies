@@ -1,17 +1,17 @@
 import { useState } from 'react';
-import React from 'react';
-import css from './Movies.module.css';
 
-const Movies = ({ onSubmit }) => {
-  const [searchMovie, setSearchMovie] = useState('');
+import css from './SearchMovie.module.css';
+
+const SearchBar = ({ onSubmit }) => {
+  const [search, setSearch] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (searchMovie.trim() === '') {
+    if (search.trim() === '') {
       return alert('Please enter the name of the movie');
     }
-    onSubmit(searchMovie);
-    setSearchMovie('');
+    onSubmit(search);
+    setSearch('');
   };
 
   return (
@@ -28,15 +28,15 @@ const Movies = ({ onSubmit }) => {
           name="query"
           className={css.searchInput}
           type="text"
-          value={searchMovie}
+          value={search}
           autoComplete="off"
           autoFocus
           placeholder="Search movies"
-          onChange={e => setSearchMovie(e.target.value)}
+          onChange={e => setSearch(e.target.value)}
         />
       </div>
     </form>
   );
 };
 
-export default Movies;
+export default SearchBar;

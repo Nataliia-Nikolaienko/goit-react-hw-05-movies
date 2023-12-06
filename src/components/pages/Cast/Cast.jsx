@@ -3,9 +3,10 @@ import { useParams } from 'react-router-dom';
 import { movieCast } from 'api/moviesApi';
 
 import CastItem from './CastItem';
+import css from './Cast.module.css';
 
 const Cast = () => {
-  const [cast, setCast] = useState();
+  const [cast, setCast] = useState([]);
   // const [error, setError] = useState(null);
 
   const { movieId } = useParams();
@@ -28,7 +29,7 @@ const Cast = () => {
   return (
     <>
       {/* {error && <h1>{error}</h1>} */}
-      <ul>
+      <ul className={css.castList}>
         <CastItem cast={cast} />
       </ul>
     </>

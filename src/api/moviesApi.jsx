@@ -31,6 +31,6 @@ export const movieCast = async id => {
 
 export const movieReviews = async id => {
   const { data } = await instance.get(`/movie/${id}/reviews`);
-  return data;
-  //   return data.results
+  // return data;
+  return data.results;
 };

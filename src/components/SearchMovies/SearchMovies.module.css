@@ -1,14 +1,25 @@
-.trendingMovieContainer {
-  margin-left: auto;
-  margin-right: auto;
+/* .trendingMovieContainer {
+  display: flex;
+  justify-content: center;
+} */
+
+.movieItemContainer {
+  max-width: 233px;
+  text-align: center;
+  height: 100%;
 }
 
 .movieList {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .movieItem {
   border: 1px solid black;
+}
+
+.posterImg {
+  border-bottom: 1px solid black;
 }

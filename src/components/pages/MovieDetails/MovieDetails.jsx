@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link, Outlet } from 'react-router-dom';
+import { useParams, NavLink, Outlet } from 'react-router-dom';
 
 import { movieDetails } from 'api/moviesApi';
 import css from './MovieDetails.module.css';
@@ -8,6 +8,7 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState();
   // const [error, setError] = useState(null);
 
+  // const location = useLocation();
   const { movieId } = useParams();
 
   useEffect(() => {
@@ -65,14 +66,22 @@ const MovieDetails = () => {
           <h3 className={css.movieDetailsTitle}>Additional information</h3>
           <ul className={css.additionalList}>
             <li>
-              <Link to="cast" className={css.additionalInfoItem}>
+              <NavLink
+                to="cast"
+                className={css.additionalInfoItem}
+                // state={location}
+              >
                 Cast
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="reviews" className={css.additionalInfoItem}>
+              <NavLink
+                to="reviews"
+                className={css.additionalInfoItem}
+                // state={location.state}
+              >
                 Reviews
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <Outlet />

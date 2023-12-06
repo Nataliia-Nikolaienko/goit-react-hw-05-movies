@@ -1,0 +1,15 @@
+.reviewsContainer {
+  padding: 20px;
+}
+
+.reviewsListItem {
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.reviewsListItem:not(:last-child) {
+  margin-bottom: 20px;
+}
+.reviewTitle {
+  margin-bottom: 10px;
+}

@@ -1,4 +1,6 @@
 .headerWrapper {
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
   background-color: rgb(55, 27, 74);
 }

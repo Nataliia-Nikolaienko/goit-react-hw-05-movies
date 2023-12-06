@@ -1,0 +1,30 @@
+.castContainer {
+  max-width: 150px;
+}
+
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.castItem {
+  border: 1px solid;
+}
+
+.castTitle {
+  text-align: center;
+}
+
+.castCharacter {
+  text-align: center;
+}
+
+.castDetailsContainer {
+  padding: 10px 5px;
+}
+
+.castCharacter {
+  font-size: 14px;
+}

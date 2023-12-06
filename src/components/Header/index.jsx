@@ -9,7 +9,7 @@ const Header = () => {
           Home
         </NavLink>
         <NavLink className={css.navLink} to="/movies">
-          Movies
+          Search movies
         </NavLink>
       </div>
     </nav>

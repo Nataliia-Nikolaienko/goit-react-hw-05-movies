@@ -39,13 +39,6 @@
   font-size: 18px;
 }
 
-.SearchMovieContainer {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .searchBarContainer {
   margin-bottom: 20px;
 }

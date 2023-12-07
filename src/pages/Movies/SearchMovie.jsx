@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { searchMovies } from 'api/moviesApi';
-import css from './SearchBar.module.css';
+import css from './SearchMovie.module.css';
 
-import SearchBar from './SearchBar';
+import SearchBar from '../../components/SearchBar/SearchBar';
 import MovieList from 'components/SearchMovies/MoviesList';
 import Loader from 'components/Loader/Loader';
 

@@ -1,11 +1,12 @@
+import React from 'react';
 import { trendingFilms } from 'api/moviesApi';
 import { useState, useEffect } from 'react';
+
 import Loader from 'components/Loader/Loader';
-import css from './TrendingMovies.module.css';
-
 import MovieList from 'components/SearchMovies/MoviesList';
+import css from './HomePage.module.css';
 
-const TrendingMovies = () => {
+const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -27,12 +28,14 @@ const TrendingMovies = () => {
   }, []);
 
   return (
-    <div className={css.trendingContainer}>
-      {isLoading && <Loader />}
-      {error && <h2>{error}</h2>}
-      <MovieList movies={movies} />
+    <div className={css.containerHome}>
+      <div className={css.trendingContainer}>
+        {isLoading && <Loader />}
+        {error && <h2>{error}</h2>}
+        <MovieList movies={movies} />
+      </div>
     </div>
   );
 };
 
-export default TrendingMovies;
+export default HomePage;
